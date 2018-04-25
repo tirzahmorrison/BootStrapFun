@@ -22,6 +22,7 @@ namespace BootStrapFun
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/Content/font-awesome_min.css",
                       "~/Content/site.css"));
         }
     }

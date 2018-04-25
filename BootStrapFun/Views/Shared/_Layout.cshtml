@@ -6,6 +6,7 @@
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="/Content/font-awesome_min.css"/>
     <style>
         body {
             padding-top: 70px; /* Whatever the height of your navbar is; the
@@ -120,71 +121,89 @@
         <div class="row">
             <p class="col-lg-10"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Please <a href="#" class="alert-link">log in </a>to edit</p>
             <div class=" col-lg-2">
-                <button type="button" class="btn btn-primary">Facebook</button>
+                <button type="button" class="btn btn-primary"><i class="fas fa-facebook-f"></i>Facebook</button>
             </div>
         </div>
     </div>
    
 
-    <div class="panel panel-default">
+    <div class="panel panel-primary">
         <!-- Default panel contents -->
-        <div class="panel-heading">Panel heading</div>
-        <div class="panel-body">
-            <p>...</p>
-        </div>
-
-        <!-- List group -->
         <ul class="list-group">
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Morbi leo risus</li>
-            <li class="list-group-item">Porta ac consectetur ac</li>
-            <li class="list-group-item">Vestibulum at eros</li>
+
+            <li class="list-group-item active"><i class="fas fa-chevron-circle-right"></i>Teams<span class="badge">317 teams</span></li>
+            <li class="list-group-item"><span class="badge">8 players</span><div class="row"><img class="col-sm-2" src="/Content/images/dartboard.png" alt="dartboard"><div class="col-sm-10"><h3>Tampa Dart Dynamos</h3>Cras justo odio</div></div></li>
+            <li class="list-group-item"><span class="badge">6 players</span><div class="row"><div class="col-sm-2"><img class="img-responsive img-rounded" src="~/Content/images/pingpong.jpg" alt="pingpong"></div><div class="col-sm-10"><h3>St Pete Ping Pong Power House</h3>Cras justo ipsum pipsim boil toil odio</div></div></li>
+            <li class="list-group-item"><span class="badge">6 players</span><div class="row"><div class="col-sm-2"><img class="img-responsive img-rounded" src="~/Content/images/golf.jpg" alt="dartboard"></div><div class="col-sm-10"><h3>Orlando Golf Gang</h3>Cras justo odio</div></div></li>
         </ul>
         <div class="panel-footer">
-            <nav aria-label="Page navigation">
-                <ul class="pagination">
-                    <li>
-                        <a href="#" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                        </a>
-                    </li>
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li>
-                        <a href="#" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+            <div class="text-center">
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        <li>
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></l
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </div>
 
 
 
-    <div class="panel panel-default">
+    <div class="panel panel-primary">
         <!-- Default panel contents -->
-        <div class="panel-heading">Panel heading</div>
+        <div class="panel-heading"><i class="fas fa-check-square"></i>Games</div>
 
         <!-- Table -->
-        <table class="table">
-            ...
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Home Team</th>
+                    <th>Away Team</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="success">
+                    <th>1</th>
+                    <td>Tampa Dart Dynamos</td>
+                    <td>Buffalo BullsEyes</td>
+                    <td>20-17</td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td>St Pete Ping Pong Power House</td>
+                    <td>Philly Paddlers</td>
+                    <td>18-12</td>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <td>Orlando Golf Gang</td>
+                    <td>Portland Putters</td>
+                    <td>2-1</td>
+                </tr>
+            </tbody>
         </table>
     </div>
     </div>
 
-    <div class="container body-content">
+   
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
-
+        
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
